@@ -8,5 +8,7 @@ import com.project.localspot_androidstudio.ui.components.PrimaryButton
 fun LoginScreen () {
 
     PrimaryButton()
+    
+    Text("Hola")
 
 }
