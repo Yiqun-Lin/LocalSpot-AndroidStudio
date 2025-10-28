@@ -23,8 +23,15 @@ fun StartScreen() {
             .padding(16.dp)
     ) {
         Text(
+            text = "Bienvenido a ",
+            fontSize = 25.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color.Black,
+            modifier = Modifier.padding(top = 16.dp)
+        )
+        Text(
             text = "LocalSpot",
-            fontSize = 28.sp,
+            fontSize = 35.sp,
             fontWeight = FontWeight.Bold,
             color = Color.Black,
             modifier = Modifier.padding(top = 16.dp)
