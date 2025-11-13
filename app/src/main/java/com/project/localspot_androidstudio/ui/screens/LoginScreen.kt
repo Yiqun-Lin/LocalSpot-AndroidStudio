@@ -1,15 +1,22 @@
 package com.project.localspot_androidstudio.ui.screens
 
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import com.project.localspot_androidstudio.ui.components.PrimaryButton
 
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 
 @Composable
-fun LoginScreen () {
-
-    PrimaryButton()
-
-    Text("Hola")
-
+fun LoginScreen() {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(24.dp),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text("Pantalla de Inicio de Sesión", style = MaterialTheme.typography.headlineMedium)
+    }
 }

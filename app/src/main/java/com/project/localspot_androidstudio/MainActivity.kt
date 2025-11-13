@@ -3,23 +3,31 @@ package com.project.localspot_androidstudio
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
+import androidx.compose.runtime.*
 import androidx.compose.ui.tooling.preview.Preview
+import kotlinx.coroutines.delay
+import com.project.localspot_androidstudio.ui.screens.StartScreen
 import com.project.localspot_androidstudio.ui.screens.LoginScreen
-import com.project.localspot_androidstudio.ui.theme.LocalSpotAndroidStudioTheme
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
-            LoginScreen()
+            // Estado que controla qué pantalla mostrar
+            var showStartScreen by remember { mutableStateOf(true) }
+
+            LaunchedEffect(Unit) {
+                delay(3000) // 3000 ms = 3 segundos
+                showStartScreen = false
+            }
+            // Esperamos 3 segundos y luego mostramos LoginScreen
+
+            if (showStartScreen) {
+                StartScreen()  // Mostramos la pantalla de Start
+            } else {
+                LoginScreen()  // Mostramos pantalla de login
+            }
         }
     }
 }
