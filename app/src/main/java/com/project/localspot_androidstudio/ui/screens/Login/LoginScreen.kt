@@ -1,4 +1,4 @@
-package com.project.localspot_androidstudio.ui.screens
+package com.project.localspot_androidstudio.ui.screens.Login
 
 
 import androidx.compose.foundation.layout.*
