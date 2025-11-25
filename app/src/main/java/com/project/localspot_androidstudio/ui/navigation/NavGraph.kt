@@ -4,8 +4,9 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.project.localspot_androidstudio.ui.screens.StartScreen
-import com.project.localspot_androidstudio.ui.screens.Login.LoginScreen
+import com.project.localspot_androidstudio.ui.screens.start.StartScreen
+import com.project.localspot_androidstudio.ui.screens.auth.login.LoginScreen
+
 
 @Composable
 fun AppNavGraph(navController: NavHostController) {
@@ -24,7 +25,6 @@ fun AppNavGraph(navController: NavHostController) {
                 }
             )
         }
-
         composable(Route.Login.route) {
             LoginScreen()
         }
